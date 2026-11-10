@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Poppy's Butchery & Fresh Meat — quality meat, freshness and great prices. Order directly on WhatsApp.">
+<title>Poppy's Butchery & Fresh Meat</title>
+<style>
+:root{--bg:#fff9f5;--surface:#fff;--surface2:#fff0f6;--text:#171217;--muted:#6e626a;--line:#eadde4;--pink:#e60072;--pink2:#ff3b9b;--gold:#f7bd24;--shadow:0 14px 40px rgba(50,15,35,.10)}
+[data-theme="dark"]{--bg:#100d11;--surface:#1c171d;--surface2:#291b27;--text:#fff8fc;--muted:#c2b3bd;--line:#40313d;--shadow:0 14px 40px rgba(0,0,0,.3)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;transition:.25s}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:-.7px}.brand-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,var(--gold),#ffdf78);color:#171217;display:grid;place-items:center;font-size:22px}.brand span em{display:block;color:var(--pink);font-style:normal;font-size:11px;letter-spacing:2px;text-transform:uppercase}.links{display:flex;gap:25px;color:var(--muted);font-size:14px;font-weight:700}.nav-actions{display:flex;align-items:center;gap:9px}.icon-btn,.cart-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:13px;padding:11px 13px;cursor:pointer;font-weight:800}.cart-btn{background:var(--pink);border-color:var(--pink);color:#fff}.count{background:#fff;color:var(--pink);border-radius:20px;padding:2px 7px;margin-left:5px}
+.hero{padding:54px 0 40px}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:36px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--surface2);color:var(--pink);padding:8px 13px;border-radius:30px;font-weight:900;font-size:12px;letter-spacing:1.2px;text-transform:uppercase}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}h1{font-size:clamp(42px,6vw,74px);line-height:.98;letter-spacing:-3px;margin:20px 0 18px;font-weight:1000}.pink{color:var(--pink)}.hero p{font-size:18px;line-height:1.65;color:var(--muted);max-width:540px}.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;border:0;border-radius:14px;padding:14px 19px;font-weight:900;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--pink);color:white;box-shadow:0 9px 20px #e6007230}.secondary{background:var(--surface);color:var(--text);border:1px solid var(--line)}.hero-photo{position:relative;min-height:410px;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,#2a121f,#090809);box-shadow:var(--shadow)}.hero-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;opacity:.8}.photo-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,5,8,.75),rgba(10,5,8,.05))}.hero-stamp{position:absolute;left:25px;bottom:25px;color:#fff;max-width:260px}.hero-stamp strong{font-size:30px;line-height:1.05;display:block}.hero-stamp span{color:var(--gold);font-weight:800}.stamp{position:absolute;right:20px;top:20px;background:var(--gold);color:#171217;border-radius:50%;width:105px;height:105px;display:grid;place-items:center;text-align:center;font-weight:1000;transform:rotate(10deg);line-height:1.1}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:15px 0 55px}.trust div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;font-weight:900}.trust small{display:block;color:var(--muted);font-weight:600;margin-top:4px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}.section-head h2{font-size:clamp(29px,4vw,42px);letter-spacing:-1.5px;margin:8px 0 0}.section-head p{color:var(--muted);margin:0}.products{padding:10px 0 65px}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.product{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px;display:flex;flex-direction:column;min-height:190px;box-shadow:0 5px 18px rgba(40,15,30,.035)}.product-top{display:flex;justify-content:space-between;align-items:start;gap:10px}.product-icon{width:46px;height:46px;border-radius:14px;background:var(--surface2);display:grid;place-items:center;font-size:24px}.product-tag{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--pink);font-weight:900}.product h3{font-size:18px;margin:16px 0 5px}.product-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:15px}.price{font-size:23px;font-weight:1000}.add{width:38px;height:38px;border:0;border-radius:12px;background:var(--pink);color:#fff;font-size:23px;cursor:pointer}
+.runner{padding:0 0 65px}.runner-card{background:linear-gradient(110deg,#171116,#33202d);color:#fff;border-radius:24px;padding:28px 30px;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.runner h2{font-size:30px;margin:0 0 8px}.runner p{color:#e3d4dd;line-height:1.6;margin:0}.fee-list{display:grid;gap:10px}.fee{display:flex;justify-content:space-between;gap:10px;background:#ffffff12;border:1px solid #ffffff20;padding:13px 15px;border-radius:13px;font-weight:800}.fee b{color:var(--gold)}.fee-note{font-size:12px;color:#e3d4dd;margin-top:10px}
+.order-area{padding:0 0 70px}.order-panel{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:25px;box-shadow:var(--shadow)}.order-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:25px}.order-panel h2{margin:0 0 18px;font-size:27px}.cart-empty{padding:25px;background:var(--bg);border:1px dashed var(--line);border-radius:14px;color:var(--muted);text-align:center}.cart-line{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:12px 0}.cart-line small{color:var(--muted)}.qty{display:flex;align-items:center;gap:8px}.qty button{border:1px solid var(--line);background:var(--surface2);color:var(--text);border-radius:8px;width:28px;height:28px;cursor:pointer;font-weight:900}.totals{margin-top:15px;display:grid;gap:10px}.total-row{display:flex;justify-content:space-between;color:var(--muted)}.total-row.grand{font-size:22px;color:var(--text);font-weight:1000;border-top:1px solid var(--line);padding-top:13px}.form{display:grid;gap:11px}.form label{font-size:12px;font-weight:900;color:var(--muted)}.form input,.form textarea,.form select{width:100%;margin-top:5px;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);font:inherit;outline:none}.form input:focus,.form textarea:focus{border-color:var(--pink)}.form textarea{resize:vertical;min-height:75px}.full{width:100%;margin-top:8px}.hint{font-size:12px;color:var(--muted);line-height:1.5}.contact{background:var(--surface2);padding:34px 0}.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.contact h2{margin:0 0 6px;font-size:30px}.contact p{margin:0;color:var(--muted)}footer{padding:22px 0;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#171217;color:white;padding:12px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:50;font-weight:800}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:800px){.links{display:none}.hero-grid,.order-grid,.runner-card{grid-template-columns:1fr}.hero{padding-top:35px}.hero-photo{min-height:330px}.product-grid{grid-template-columns:repeat(2,1fr)}.trust{margin-bottom:40px}.contact-inner{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.nav{height:67px}.brand{font-size:14px}.brand-mark{width:37px;height:37px}.hero-grid{gap:24px}h1{letter-spacing:-2px}.hero p{font-size:16px}.hero-photo{min-height:290px}.product-grid{grid-template-columns:1fr 1fr;gap:10px}.product{padding:14px;min-height:178px}.product h3{font-size:15px}.price{font-size:19px}.product-icon{width:39px;height:39px}.section-head{align-items:flex-start;flex-direction:column}.trust div{padding:13px 5px;font-size:12px}.trust small{font-size:10px}.runner-card{padding:22px}.order-panel{padding:17px}.stamp{width:83px;height:83px;font-size:13px}.hero-stamp strong{font-size:25px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="brand" href="#"><span class="brand-mark">♜</span><span>POPPY'S <em>Butchery & Fresh Meat</em></span></a>
+ <nav class="links"><a href="#products">Our products</a><a href="#runner">Runner fees</a><a href="#order">Order online</a></nav>
+ <div class="nav-actions"><button class="icon-btn" id="themeBtn" aria-label="Toggle colour theme">☾</button><a class="cart-btn" href="#order">Cart <span class="count" id="cartCount">0</span></a></div>
+</div></header>
+<main>
+<section class="hero"><div class="wrap hero-grid">
+ <div><span class="eyebrow">Fresh meat always</span><h1>Quality meat.<br><span class="pink">Great prices.</span></h1>
+ <p>Bring home freshness with Poppy's Butchery. Shop our selection of Russians, wors and meaty bones, then send your order straight to WhatsApp.</p>
+ <div class="hero-ctas"><a class="btn primary" href="#products">Shop our prices <span>→</span></a><a class="btn secondary" href="https://wa.me/27659707418" target="_blank" rel="noopener">WhatsApp us</a></div>
+ </div>
+ <div class="hero-photo"><img src="assets/poppys-flyer.jpg" alt="Poppy's Butchery flyer and fresh meat selection"><div class="photo-overlay"></div><div class="stamp">FRESH<br>QUALITY<br>MEAT ♡</div><div class="hero-stamp"><strong>Fresh meat<br>for happy families.</strong><span>QUALITY • FRESHNESS • VALUE</span></div></div>
+</div></section>
+<div class="wrap trust"><div>✦ Quality meat<small>Carefully selected</small></div><div>✦ Freshness<small>Fresh meat always</small></div><div>✦ Great prices<small>Value for your money</small></div></div>
+<section class="products" id="products"><div class="wrap">
+ <div class="section-head"><div><span class="eyebrow">Shop the range</span><h2>Our <span class="pink">prices</span></h2></div><p>Tap + to add items to your order.</p></div>
+ <div class="product-grid" id="productGrid"></div>
+</div></section>
+<section class="runner" id="runner"><div class="wrap runner-card">
+ <div><span class="eyebrow">Delivery information</span><h2>Runner fee</h2><p>Runner fees are based on the order value shown in the flyer. The applicable fee is added to your order total.</p></div>
+ <div><div class="fee-list"><div class="fee"><span>Order value: R500 – R2,000</span><b>R250</b></div><div class="fee"><span>Order value: Over R2,000 – R3,000</span><b>R300</b></div></div><div class="fee-note">Orders below R500 or above R3,000: runner fee must be confirmed with Poppy's before payment.</div></div>
+</div></section>
+<section class="order-area" id="order"><div class="wrap order-panel">
+ <div class="section-head"><div><span class="eyebrow">Almost there</span><h2>Your <span class="pink">order</span></h2></div><p>Review your cart, then send it on WhatsApp.</p></div>
+ <div class="order-grid"><div><h2>Shopping cart</h2><div id="cartItems" class="cart-empty">Your cart is empty. Add products above to get started.</div><div id="totals" class="totals" hidden><div class="total-row"><span>Items subtotal</span><b id="subtotal">R0</b></div><div class="total-row"><span>Runner fee</span><b id="runnerFee">To be confirmed</b></div><div class="total-row grand"><span>Estimated total</span><b id="grandTotal">R0</b></div></div></div>
+ <div><h2>Delivery details</h2><form class="form" id="checkoutForm">
+ <label>Your name<input id="customerName" required placeholder="Enter your name"></label>
+ <label>Contact number<input id="customerPhone" required inputmode="tel" placeholder="e.g. 071 234 5678"></label>
+ <label>Delivery address / collection details<textarea id="customerAddress" required placeholder="Where should the order go?"></textarea></label>
+ <label>Additional instructions (optional)<textarea id="customerNote" placeholder="Any special requests?"></textarea></label>
+ <button class="btn primary full" type="submit">Send order on WhatsApp ↗</button>
+ <p class="hint">Your order will open in WhatsApp addressed to 065 970 7418. Check the message and press Send in WhatsApp to place your order. Payment and final runner arrangements are confirmed directly with the butchery.</p>
+ </form></div></div>
+</div></section>
+<section class="contact"><div class="wrap contact-inner"><div><h2>Ready for fresh meat?</h2><p>Call or WhatsApp Poppy's Butchery directly.</p></div><a class="btn primary" href="https://wa.me/27659707418" target="_blank" rel="noopener">☎ 065 970 7418</a></div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Poppy's Butchery & Fresh Meat</span><span>Fresh meat • Good food • Happy families</span></div></footer>
+<div class="toast" id="toast">Added to your cart</div>
+<script>
+const products=[
+ {name:"3kg Cheese Russian",price:450,icon:"🌭"},
+ {name:"3kg Top Russian",price:400,icon:"🌭"},
+ {name:"1kg Top Russian",price:160,icon:"🌭"},
+ {name:"1kg Cheese Russian",price:170,icon:"🌭"},
+ {name:"1kg Jalapeño",price:170,icon:"🌶️"},
+ {name:"1kg Footlong Cheese Russian",price:200,icon:"🌭"},
+ {name:"4kg Meaty Bones",price:280,icon:"🥩"},
+ {name:"4kg Pork Meaty Bones",price:270,icon:"🥩"},
+ {name:"Malakhoho",price:40,icon:"🥩"},
+ {name:"Joe’s Wors",price:40,icon:"🌭"},
+ {name:"1kg Boerewors",price:150,icon:"🌭"}
+];
+let cart={};
+const money=n=>"R"+n.toLocaleString("en-ZA");
+const grid=document.getElementById("productGrid");
+products.forEach((p,i)=>{const card=document.createElement("article");card.className="product";card.innerHTML=`<div class="product-top"><span class="product-icon">${p.icon}</span><span class="product-tag">Fresh selection</span></div><h3>${p.name}</h3><div class="product-foot"><span class="price">${money(p.price)}</span><button class="add" aria-label="Add ${p.name}" data-add="${i}">+</button></div>`;grid.appendChild(card)});
+grid.addEventListener("click",e=>{const b=e.target.closest("[data-add]");if(!b)return;const i=Number(b.dataset.add);cart[i]=(cart[i]||0)+1;renderCart();showToast(products[i].name+" added")});
+function renderCart(){
+ const keys=Object.keys(cart).filter(k=>cart[k]>0),box=document.getElementById("cartItems"),totals=document.getElementById("totals");
+ document.getElementById("cartCount").textContent=keys.reduce((s,k)=>s+cart[k],0);
+ if(!keys.length){box.className="cart-empty";box.textContent="Your cart is empty. Add products above to get started.";totals.hidden=true;return}
+ box.className="";box.innerHTML=keys.map(k=>{const p=products[k];return `<div class="cart-line"><div><b>${p.name}</b><br><small>${money(p.price)} each</small></div><div class="qty"><button data-change="${k}" data-delta="-1">−</button><b>${cart[k]}</b><button data-change="${k}" data-delta="1">+</button></div><b>${money(p.price*cart[k])}</b></div>`}).join("");
+ const sub=keys.reduce((s,k)=>s+products[k].price*cart[k],0);
+ let fee=null;if(sub>=500&&sub<=2000)fee=250;else if(sub>2000&&sub<=3000)fee=300;
+ document.getElementById("subtotal").textContent=money(sub);
+ document.getElementById("runnerFee").textContent=fee===null?"To be confirmed":money(fee);
+ document.getElementById("grandTotal").textContent=fee===null?money(sub)+" + fee":money(sub+fee);
+ totals.hidden=false;
+}
+box=document.getElementById("cartItems");
+box.addEventListener("click",e=>{const b=e.target.closest("[data-change]");if(!b)return;const k=b.dataset.change;cart[k]+=Number(b.dataset.delta);if(cart[k]<=0)delete cart[k];renderCart()});
+document.getElementById("checkoutForm").addEventListener("submit",e=>{
+ e.preventDefault();const keys=Object.keys(cart).filter(k=>cart[k]>0);if(!keys.length){showToast("Please add products first");return}
+ const sub=keys.reduce((s,k)=>s+products[k].price*cart[k],0);let fee=null;if(sub>=500&&sub<=2000)fee=250;else if(sub>2000&&sub<=3000)fee=300;
+ const lines=keys.map(k=>`${cart[k]} x ${products[k].name} — ${money(products[k].price*cart[k])}`);
+ const name=document.getElementById("customerName").value.trim(),phone=document.getElementById("customerPhone").value.trim(),address=document.getElementById("customerAddress").value.trim(),note=document.getElementById("customerNote").value.trim();
+ const msg=`Hello Poppy's Butchery! I'd like to place an order:\n\n${lines.join("\n")}\n\nItems subtotal: ${money(sub)}\nRunner fee: ${fee===null?"Please confirm (order outside listed fee bands)":money(fee)}\nEstimated total: ${fee===null?money(sub)+" + runner fee":money(sub+fee)}\n\nCustomer: ${name}\nContact: ${phone}\nAddress / collection: ${address}\nAdditional instructions: ${note||"None"}\n\nPlease confirm availability and the final amount.`;
+ window.open("https://wa.me/27659707418?text="+encodeURIComponent(msg),"_blank");
+});
+const themeBtn=document.getElementById("themeBtn");
+const saved=localStorage.getItem("poppys-theme");if(saved)document.documentElement.dataset.theme=saved;
+function syncTheme(){themeBtn.textContent=document.documentElement.dataset.theme==="dark"?"☀":"☾"}
+syncTheme();themeBtn.addEventListener("click",()=>{const next=document.documentElement.dataset.theme==="dark"?"light":"dark";document.documentElement.dataset.theme=next;localStorage.setItem("poppys-theme",next);syncTheme()});
+function showToast(t){const el=document.getElementById("toast");el.textContent=t;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1700)}
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body></html>
